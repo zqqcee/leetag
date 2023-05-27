@@ -37,7 +37,7 @@ This extension uses Chrome Extension API `menifest V3`. So please make sure your
   - If you want to know the tags about this question, click the `tag` button.
   - If you want to get some hints for this question, click the `hints` button.
 
-<video src="doc/leetag.mp4"></video>
+![leetag](doc/leetag.gif)
 
 ### Warning
 
