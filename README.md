@@ -1,4 +1,4 @@
-<p align="center"><img width="15%" src="images/logo128.png" /></p>
+<p align="center"><img width="25%" src="images/logo128.png" /></p>
 <h1>leetag</h1>
 
 ​	Sometimes, I have no idea how to resolve a question from Leetcode.Same to you, I really don't want to click the "Solution" directly, because it lacks fun to resolve the question at all, so I usually open the comment component to find some inspiring discussion. But I found that if someone can **give me some tags or short hints** about the question like what method to use, such as arrays, greedy algorithm, dynamic programming, etc., I can quickly start coding. The tags and hints on Leetcode are **hidden in the lower left corner**. I think this kind of way to display  is a liitle bit troublesome. So I write this chrome extension.
