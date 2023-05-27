@@ -1,4 +1,3 @@
-
 /**
  * 生成fetch leetcode info的header，这里不使用cookies也可以拿到信息，因为不登录
  */
@@ -119,6 +118,7 @@ const fetchByTitle = async (title) => {
             isBeta
         }
     }
+
     return tmp;
 }
 
@@ -126,8 +126,9 @@ const fetchByTitle = async (title) => {
 chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
     switch (msg.action) {
         case "getData":
+
             if (!info[msg.title]) {
-                await fetchByTitle(msg.title).then(info => sendResponse(info))
+                await fetchByTitle(msg.title).then(info => { sendResponse(info) })
                 return true;
             } else {
                 sendResponse(info);

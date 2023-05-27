@@ -24,7 +24,7 @@ const getData = async () => {
         const result = await chrome.runtime.sendMessage({ action: "getData", title })
         return result;
     } catch (e) {
-        console.error("please refresh the website and try again.");
+        console.error("please refresh the extension and website, try again.");
     }
 
 }
@@ -156,4 +156,8 @@ const main = () => {
 }
 
 
-main();
+setTimeout(() => {
+    main()
+}, 2000);
+
+

@@ -2,11 +2,11 @@
 
 # leetag
 
-​	Sometimes, I have no idea how to resolve a question from Leetcode.Same to you, I really don't want to click the "Solution" directly, because it lacks fun to resolve the question at all, so I usually open the comment component to find some inspiring discussion. But I found that if someone can **give me some tags or short hints** about the question like what method to use, such as arrays, greedy algorithm, dynamic programming, etc., I can quickly start coding. The tags and hints on Leetcode are **hidden in the lower left corner**. I think this kind of way to display  is a liitle bit troublesome. So I write this chrome extension.
+​	Sometimes, I have no idea how to resolve a question from Leetcode.Same to you, I really don't want to click the "Solution" directly, because it lacks fun to resolve the question at all, so I usually open the comment component to find some inspiring discussion. However, I found that if someone can **give me some tags or short hints** about the question like what method to use, such as arrays, greedy algorithm, dynamic programming, etc., I can quickly start coding. The tags and hints on Leetcode are **hidden in the lower left corner**. I think this kind of way to display  is a liitle bit troublesome. So I write this chrome extension.
 
 ### Introduction
 
-​	This project is a chrome extension working on leetcode platform, which can remind you the tags and hints of the problem you're struggling with in a soft way. Meanwhile, it can show you which weekly contest this question has occurred in with a tag attached question title. That's why one named "leetag".
+​	This project is a chrome extension working on leetcode platform, which can remind you the **tags** and **hints** of the problem you're struggling with in a soft way. Meanwhile, it can show you **which weekly contest this question has occurred in** with a tag attached question title. That's why one named "leetag".
 
 ### Install
 
@@ -26,11 +26,9 @@ This extension uses Chrome Extension API `menifest V3`. So please make sure your
 
 - Visit the `https://leetcode.cn/problemset/all/`,and select any problem you want to resolve.
 
-- You will see the `leetag` button locating here.
+- When you open a page of question, You will see the `leetag` button locating here, after about `2s`.
 
   ![image-20230526194001981](doc/home.png)
-
-- If the above works, please star my repostry.
 
 ### Usage
 
@@ -40,9 +38,9 @@ This extension uses Chrome Extension API `menifest V3`. So please make sure your
   - If you want to know the tags about this question, click the `tag` button.
   - If you want to get some hints for this question, click the `hints` button.
 
-<video src="doc/leetag.mov"></video>
+<video src="doc/leetag.mp4"></video>
 
-### Warning and TBD
+### Warning
 
 - This extension hasn't **supported leetcode beta**, so it can't work on the new version platform.
 
@@ -50,16 +48,13 @@ This extension uses Chrome Extension API `menifest V3`. So please make sure your
 
 - If you have refreshed the extension, please reload the leetcode website. 
 
-  - This limitation is caused by local installation.
+  - This limitation is caused by **local installation.**
 
   - If you forget to refresh the website **after refreshing the extension**, you will receive the following error reminder in the console:
 
-    ```bash
-    1. please refresh the website and try again.
-    2. {title} undefined
-    ```
+    ![image-20230527203810255](doc/error.png)
 
-- Some fetching bug can solve after refresh.
+**Some fetching bug can solve after refresh (refresh the extension first,then refresh the website).**
 
 ### Related Projects
 
