@@ -1,0 +1,39 @@
+.test {
+    margin-top: 11px;
+}
+
+
+.button {
+    user-select: none;
+    font-size: 12px;
+    line-height: 20px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-decoration: none;
+    transition-property: color, background-color;
+    transition-duration: 0.3s;
+    white-space: nowrap;
+    color: rgba(38, 38, 38, 1);
+    background-color: rgba(0, 10, 32, 0.05);
+    padding: 0px 6px;
+    min-width: 40px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.button:hover {
+    color: rgba(38, 38, 38, 1) !important;
+    background-color: rgba(0, 10, 32, 0.1);
+}
+
+
+.contestInfo {
+    margin-top: 5px;
+    color: brown;
+    font-size: 14px;
+    font-family: cursive;
+    font-weight: bold;
+}
