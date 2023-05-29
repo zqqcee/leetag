@@ -31,6 +31,8 @@ This extension uses Chrome Extension API `menifest V3`. So please make sure your
 
 ### Usage
 
+**Note: Some fetching bug can solve after refresh (refresh the extension first,then refresh the website).**
+
 - When you visit **leecode.cn** website and open a question, `background.js` fetches the question data and weekly contest data, automatically.
 - If you wonder which weekly contest this question has occurred in, you're able to click the `leetag` button.
 - then,
