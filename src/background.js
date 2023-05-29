@@ -119,6 +119,7 @@ const fetchByTitle = async (title) => {
         }
     }
 
+    console.log(tmp);
     return tmp;
 }
 
@@ -126,9 +127,20 @@ const fetchByTitle = async (title) => {
 chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
     switch (msg.action) {
         case "getData":
-
             if (!info[msg.title]) {
-                await fetchByTitle(msg.title).then(info => { sendResponse(info) })
+                console.log(111);
+                const leetcodeTagsAndHints = await fetchTagsAndHints(title) //{data:,qustion,}
+                const weeklyContest = await fetchRatingData(title); //可以是undefined，表示没有周赛数据
+                const isBeta = await fetchIsBeta();
+                const tmp = {
+                    ...info, [title]: {
+                        leetcodeTagsAndHints,
+                        weeklyContest,
+                        isBeta
+                    }
+                }
+                console.log(tmp);
+                sendResponse(tmp);
                 return true;
             } else {
                 sendResponse(info);

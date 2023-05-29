@@ -19,14 +19,12 @@ const handleResult = (data) => {
 
 
 const getData = async () => {
-
     try {
         const result = await chrome.runtime.sendMessage({ action: "getData", title })
         return result;
     } catch (e) {
         console.error("please refresh the extension and website, try again.");
     }
-
 }
 
 
@@ -109,8 +107,8 @@ const displayWeeklyContest = (info) => {
 }
 
 //workflow
-const _ = async () => {
-    const info = await getData()
+const _ = () => {
+    getData()
         .then(result => {
             let tmp = handleResult(result[title]);
             if (tmp.isBeta) {
@@ -119,15 +117,17 @@ const _ = async () => {
                 titleClassName = ""
             }
             return tmp;
-
+        }).then(info=>{
+            displayWeeklyContest(info.weeklyContest)
+            createTagButton(info.question, info.isBeta)
+            createHintsButton(info.question, info.isBeta)
         })
-    displayWeeklyContest(info.weeklyContest)
-    createTagButton(info.question, info.isBeta)
-    createHintsButton(info.question, info.isBeta)
+
+        
+
 }
 
 const createInitButton = (intervalId) => {
-
     let button = document.createElement("a")
     button.id = "button_init"
     button.className = "topic-tag__1z4- css-1np0stn-BasicTag e4dtce60"
@@ -149,7 +149,6 @@ const createInitButton = (intervalId) => {
 
 
 const main = () => {
-
     let a = setInterval(() => {
         createInitButton(a)
     }, 500);
@@ -160,4 +159,10 @@ setTimeout(() => {
     main()
 }, 2000);
 
+
+// (async () => {
+//     const response = await chrome.runtime.sendMessage({ greeting: "hello" });
+    
+//     console.log(response);
+// })();
 
