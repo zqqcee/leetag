@@ -55,7 +55,7 @@ This extension uses Chrome Extension API `menifest V3`. So please make sure your
 
     ![image-20230527203810255](doc/error.png)
 
-**Some fetching bug can solve after refresh (refresh the extension first,then refresh the website).**
+**Some fetching bug can be solved after refresh (refresh the extension first,then refresh the website).**
 
 ### Related Projects
 
