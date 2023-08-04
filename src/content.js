@@ -18,13 +18,11 @@ const handleResult = (data) => {
 }
 
 const getData = async () => {
-    try {
-        const result = await chrome.runtime.sendMessage({ action: "getData", title });
-        return result;
-    } catch (e) {
-        const result = await fetchData(title);
-        return result;
+    let result = await chrome.runtime.sendMessage({ action: "getData", title });
+    if (result === undefined) {
+        result = await fetchData(title)
     }
+    return result;
 }
 
 /**
