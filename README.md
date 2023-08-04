@@ -11,7 +11,7 @@ This project is a chrome extension working on leetcode platform, which can remin
 
 This extension uses Chrome Extension API `menifest V3`. So please make sure your chrome version is **88+**.
 
-- Clone this repository , run  `git clone xxxx`
+- Clone this repository , run  `git clone https://github.com/zqqcee/leetag.git`
 
 - Open the chrome extensions page. You can visit `chrome://extensions/` 
 
