@@ -101,7 +101,6 @@ chrome.tabs.onUpdated.addListener(async function myListener(tabId, changeInfo, t
                 }
             }
         }
-        // chrome.tabs.onUpdated.removeListener(myListener)
     }
 });
 
@@ -118,8 +117,6 @@ const fetchByTitle = async (title) => {
             isBeta
         }
     }
-
-    console.log(tmp);
     return tmp;
 }
 
@@ -128,18 +125,10 @@ chrome.runtime.onMessage.addListener(async (msg, sender, sendResponse) => {
     switch (msg.action) {
         case "getData":
             if (!info[msg.title]) {
-                console.log(111);
-                const leetcodeTagsAndHints = await fetchTagsAndHints(title) //{data:,qustion,}
-                const weeklyContest = await fetchRatingData(title); //可以是undefined，表示没有周赛数据
-                const isBeta = await fetchIsBeta();
+                const data = await fetchByTitle(msg.title) //{data:,qustion,}
                 const tmp = {
-                    ...info, [title]: {
-                        leetcodeTagsAndHints,
-                        weeklyContest,
-                        isBeta
-                    }
+                    ...info, ...data
                 }
-                console.log(tmp);
                 sendResponse(tmp);
                 return true;
             } else {
