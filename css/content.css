@@ -1,5 +1,47 @@
-.test {
+.tags {
     margin-top: 11px;
+}
+
+.hints {
+    margin-top: 11px;
+    overflow-wrap: break-word;
+}
+
+.hints>ul>li>code {
+    background: rgba(0, 10, 32, 0.05);
+    color: rgba(89, 89, 89, 1);
+    padding: 2px 4px;
+    font-size: 13px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.hints>ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.hints>ul>li {
+    height: 25px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 3px;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+.hints>ul>li:hover {
+    background-color: #f6f6f6;
+    height: auto;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    line-height: 18px;
+    transition-property: all;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
 }
 
 
@@ -31,9 +73,20 @@
 
 
 .contestInfo {
-    margin-top: 5px;
-    color: brown;
+    margin-top: 13px;
+}
+
+.contestInfoText {
+    color: #696917 !important;
     font-size: 14px;
     font-family: cursive;
     font-weight: bold;
+}
+
+.contestInfoTextNotFound {
+    color: brown !important;
+}
+
+.hintsNotFound {
+    color: brown;
 }
